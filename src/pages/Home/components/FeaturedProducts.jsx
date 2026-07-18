@@ -1,4 +1,5 @@
 import "./FeaturedProducts.css";
+import ProductCard from "../../../components/ProductCard/ProductCard";
 
 function FeaturedProducts() {
     const products = [
@@ -29,17 +30,11 @@ function FeaturedProducts() {
             <h2>Featured Products</h2>
             <div className="product-grid">
                 {products.map((product)=>(
-                    <div
+                    <ProductCard
                         key={product.id}
-                        className="product-card"
-                    >
-
-                        <h3>{product.name}</h3>
-                        <p>{product.price}</p>
-                        <button>
-                            View Product
-                        </button>
-                    </div>
+                        name={product.name}
+                        price={product.price}
+                    />
                 ))}
             </div>
         </section>

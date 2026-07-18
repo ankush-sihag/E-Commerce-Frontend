@@ -1,6 +1,7 @@
 import "./Home.css";
-import Hero from "./components/Hero";
-import Categories from "./components/Categories";
+import Hero from "./components/Hero.jsx";
+import Categories from "./components/Categories.jsx";
+import FeaturedProducts from "./components/FeaturedProducts.jsx";
 
 function Home() {
 
@@ -8,6 +9,7 @@ function Home() {
         <main>
             <Hero />
             <Categories />
+            <FeaturedProducts />
         </main>
     );
 }
