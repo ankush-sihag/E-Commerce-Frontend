@@ -3,9 +3,29 @@ import "./ProductCard.css";
 function ProductCard(props){
     return(
         <div className="product-card">
-            <h3>{props.name}</h3>
-            <p>{props.price}</p>
-            <button>View Product</button>
+            <div className="product-image">
+                {props.image}
+            </div>
+
+            <div className="product-rating">
+                {props.rating}
+            </div>
+
+            <h3>
+                {props.name}
+            </h3>
+
+            <p className="product-price">
+                {props.price}
+            </p>
+
+            <p className="delivery">
+                {props.delivery}
+            </p>
+
+            <button>
+                Add To Cart
+            </button>
         </div>
     );
 }
