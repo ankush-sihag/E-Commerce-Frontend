@@ -47,10 +47,20 @@ function FeaturedProducts() {
             <h2>Featured Products</h2>
             <div className="product-grid">
                 {products.map((product)=>(
-                    <ProductCard
+                   <ProductCard
+
                         key={product.id}
+
                         name={product.name}
+
                         price={product.price}
+
+                        image={product.image}
+
+                        rating={product.rating}
+
+                        delivery={product.delivery}
+
                     />
                 ))}
             </div>
