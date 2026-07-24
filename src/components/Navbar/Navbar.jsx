@@ -1,6 +1,11 @@
 import "./Navbar.css";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
+    const { cart } = useContext(CartContext);
+
     return (
         <header className="navbar">
             <div className="logo">
@@ -17,8 +22,13 @@ function Navbar() {
             </div>
 
             <div className="nav-action">
-                <button>Cart</button>
-                <button>Login</button>
+                <NavLink to="/cart">
+                    <button>Cart ({cart.length})</button>
+                </NavLink>
+
+                <NavLink to="/login">
+                    <button>Login</button>
+                </NavLink>
             </div>
 
             {/* <nav className="nav-links">

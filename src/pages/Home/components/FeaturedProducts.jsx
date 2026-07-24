@@ -1,47 +1,9 @@
+import products from "../../../data/products";
 import "./FeaturedProducts.css";
 import ProductCard from "../../../components/ProductCard/ProductCard";
 
 function FeaturedProducts() {
-    const products = [
-
-    {
-        id: 1,
-        name: "iPhone 16",
-        price: "₹79,999",
-        image: "📱",
-        rating: "⭐⭐⭐⭐⭐",
-        delivery: "Free Delivery"
-    },
-
-    {
-        id: 2,
-        name: "MacBook Pro",
-        price: "₹1,79,999",
-        image: "💻",
-        rating: "⭐⭐⭐⭐⭐",
-        delivery: "Free Delivery"
-    },
-
-    {
-        id: 3,
-        name: "Samsung S26",
-        price: "₹89,999",
-        image: "📱",
-        rating: "⭐⭐⭐⭐",
-        delivery: "Delivery Tomorrow"
-    },
-
-    {
-        id: 4,
-        name: "Sony Headphones",
-        price: "₹14,999",
-        image: "🎧",
-        rating: "⭐⭐⭐⭐⭐",
-        delivery: "Free Delivery"
-    }
-
-];
-
+    
     return (
         <section className="featured-products">
             <h2>Featured Products</h2>

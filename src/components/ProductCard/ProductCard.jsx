@@ -23,7 +23,11 @@ function ProductCard(props){
                 {props.delivery}
             </p>
 
-            <button>
+            <button
+                onClick={() => {
+                    props.addToCart(props.product)
+                }}
+            >
                 Add To Cart
             </button>
         </div>

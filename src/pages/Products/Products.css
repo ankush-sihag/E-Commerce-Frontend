@@ -1,0 +1,38 @@
+.products-page{
+    max-width:1200px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.products-page h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.products-controls{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-bottom:35px;
+    flex-wrap:wrap;
+}
+
+.products-controls input{
+    width:320px;
+    padding:10px 14px;
+    font-size:16px;
+}
+
+.products-controls select{
+    padding:10px 14px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    /* border:3px solid red; */
+}
