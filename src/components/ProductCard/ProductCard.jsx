@@ -1,36 +1,43 @@
+import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
-function ProductCard(props){
-    return(
+function ProductCard(props) {
+
+    const product = props.product;
+
+    const imageUrl =
+        product.image ||
+        "https://placehold.co/300x300?text=No+Image";
+
+    return (
+
         <div className="product-card">
-            <div className="product-image">
-                {props.image}
-            </div>
+            <img
+                src={imageUrl}
+                alt={product.name}
+                className="product-image"
+            />
 
-            <div className="product-rating">
-                {props.rating}
-            </div>
-
-            <h3>
-                {props.name}
-            </h3>
-
-            <p className="product-price">
-                {props.price}
+            <h3>{product.name}</h3>
+            <p className="price">
+                ₹ {product.price}
             </p>
 
-            <p className="delivery">
-                {props.delivery}
+            <p>
+                ⭐ {product.rating || "No Rating"}
             </p>
 
-            <button
-                onClick={() => {
-                    props.addToCart(props.product)
-                }}
+            <Link
+                to={`/products/${product._id}`}
             >
-                Add To Cart
-            </button>
+
+                <button>
+                    View Details
+                </button>
+
+            </Link>
         </div>
+
     );
 }
 
